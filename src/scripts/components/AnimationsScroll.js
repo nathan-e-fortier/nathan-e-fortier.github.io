@@ -29,7 +29,6 @@ export default class AnimationsScroll {
       this.herosFiche();
       this.defis();
       this.navigationFiche();
-      this.blocInterets();
       this.videoPresentation();
     });
 
@@ -368,24 +367,6 @@ export default class AnimationsScroll {
       clearProps: 'transform',
       scrollTrigger: { trigger: nav, start: 'top 95%', once: true },
     });
-  }
-
-  blocInterets() {
-    const bloc = this.element.querySelector('.interets');
-    if (!bloc) return;
-
-    const rayon = getComputedStyle(bloc).borderTopLeftRadius;
-
-    // https://gsap.com/docs/v3/Plugins/ScrollTrigger/ (scrub)
-    gsap.fromTo(
-      bloc,
-      { clipPath: `inset(6% 8% round ${rayon})` },
-      {
-        clipPath: `inset(0% 0% round ${rayon})`,
-        ease: 'none',
-        scrollTrigger: { trigger: bloc, start: 'top 95%', end: 'top 40%', scrub: true },
-      }
-    );
   }
 
   videoPresentation() {
