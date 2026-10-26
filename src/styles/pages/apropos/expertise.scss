@@ -4,16 +4,33 @@
     flex-direction: column;
     gap: var(--spacing-xxl);
 
+    &_apropos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+        color: var(--color-white);
+        text-align: center;
+    }
+
     &_apropos-titre {
         margin: 0;
-        @include text-hero;
-        font-size: var(--font-size-h1);
+        font-family: var(--font-primary);
+        font-weight: 800;
+        font-size: var(--font-size-display);
+        line-height: var(--lh-display);
+        text-transform: none;
         color: var(--color-white);
-        text-transform: uppercase;
 
-        @media screen and (width <= $breakpoint-md) {
-            text-align: center;
+        em {
+            font-style: normal;
+            color: var(--color-primary);
         }
+    }
+
+    &_indice-scroll {
+        @include icone-fleche(32px, 20px);
+        @include fleche-rebond;
     }
 
     &_outils h2,
