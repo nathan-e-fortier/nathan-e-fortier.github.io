@@ -429,3 +429,23 @@ html.menu-ouvert {
         transform: translateY(-7px) rotate(-45deg);
     }
 }
+
+.lien-evitement {
+    position: fixed;
+    z-index: 1000;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    padding: 12px 24px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-rond);
+    color: var(--color-white);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    transform: translateY(calc(-100% - 2 * var(--spacing-sm)));
+
+    &:focus {
+        transform: none;
+        outline: 3px solid var(--color-white);
+        outline-offset: 2px;
+    }
+}

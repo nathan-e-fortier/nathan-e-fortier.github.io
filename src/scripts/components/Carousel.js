@@ -90,6 +90,5 @@ export default class Carousel {
   init() {
     this.setOptions();
     new Swiper(this.element, this.options);
-    console.log('Je suis un carousel');
   }
 }

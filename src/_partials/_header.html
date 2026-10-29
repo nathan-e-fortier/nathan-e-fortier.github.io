@@ -16,9 +16,13 @@
         <title>{{title}} · Nathan Fortier</title>
         <meta
             name="description"
-            content="Portfolio de Nathan Fortier, créateur multimédia multidisciplinaire : vidéo, son, motion, 3D et design web."
+            content="{% if projet is defined %}{{ projet.description|striptags }}{% else %}Portfolio de Nathan Fortier, créateur multimédia multidisciplinaire : vidéo, son, motion, 3D et design web.{% endif %}"
         />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" href="assets/fonts/SF-Pro.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Shrikhand&display=swap" />
         <link rel="stylesheet" href="styles/main.css" />
 
         <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
@@ -29,6 +33,7 @@
         <script src="scripts/main.js" defer></script>
     </head>
     <body data-component="Scrolly">
+        <a href="#contenu" class="lien-evitement">Aller au contenu</a>
         {% set liensNav = [
             { texte: "À propos", lien: "index.html#apropos", page: "apropos" },
             { texte: "Projets", lien: "index.html#projets", page: "projets" },

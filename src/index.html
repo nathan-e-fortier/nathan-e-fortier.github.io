@@ -1,18 +1,18 @@
-{% include "_partials/_header.html" with {title:"À propos", activePage:"apropos"} %}
+{% include "_partials/_header.html" with {title:"Accueil", activePage:"apropos"} %}
 
-<main class="apropos" data-component="FondScroll">
+<main class="apropos" id="contenu" data-component="FondScroll">
     <section class="heros" id="accueil" data-fond="clair">
         <div class="wrapper">
             <div class="heros_contenu" data-scrolly="fromBottom">
                 <a href="#video-presentation" class="heros_photo" aria-label="Voir ma vidéo de présentation">
                     <span class="heros_decor heros_ecouteurs" aria-hidden="true">
-                        <img src="assets/images/Écouteur.png" alt="" />
+                        <img src="assets/images/ecouteur.webp" alt="" />
                     </span>
                     <span class="heros_decor heros_baguettes" aria-hidden="true">
-                        <img src="assets/images/Drumsticks.png" alt="" />
+                        <img src="assets/images/drumsticks.webp" alt="" />
                     </span>
                     <span class="heros_photo-cadre">
-                        <img src="assets/images/hero-nathan.webp" alt="Nathan Fortier, les bras croisés" />
+                        <img src="assets/images/hero-nathan.webp" alt="Nathan Fortier, les bras croisés" fetchpriority="high" />
                     </span>
                 </a>
 
@@ -55,10 +55,10 @@
             <div class="carte-video" id="video-presentation" data-component="Youtube" data-video-id="OoicWhFiQ14">
                 <div class="carte-video_affiche js-poster">
                     <div class="carte-video_portrait" aria-hidden="true">
-                        <img src="assets/images/Drumsticks.png" alt="" class="carte-video_baguettes" />
-                        <img src="assets/images/Écouteur.png" alt="" class="carte-video_ecouteurs" />
+                        <img src="assets/images/drumsticks.webp" alt="" class="carte-video_baguettes" loading="lazy" />
+                        <img src="assets/images/ecouteur.webp" alt="" class="carte-video_ecouteurs" loading="lazy" />
                         <span class="carte-video_cadre">
-                            <img src="assets/images/hero-nathan.webp" alt="" class="carte-video_photo" />
+                            <img src="assets/images/hero-nathan.webp" alt="" class="carte-video_photo" loading="lazy" />
                         </span>
                     </div>
 
@@ -105,7 +105,7 @@
                     <article class="carte-projet">
                         {% include "_partials/_tampon-prix.html" with {prix: "Meilleur site web", variante: "carte"} %}
                         <div class="carte-projet_media">
-                            <img src="assets/images/project-webjam-bg.webp" alt="Site web WordPress du Q-tipousse" />
+                            <img src="assets/images/project-webjam-bg.webp" loading="lazy" alt="Site web WordPress du Q-tipousse" />
                         </div>
                         <div class="carte-projet_corps">
                             <p class="carte-projet_etiquette">Site WordPress en équipe</p>
@@ -121,7 +121,7 @@
                 <div class="swiper-slide">
                     <article class="carte-projet">
                         <div class="carte-projet_media">
-                            <img src="assets/images/project-reaper-bg.webp" alt="Bande-annonce montée et sonorisée sur Reaper" />
+                            <img src="assets/images/project-reaper-bg.webp" loading="lazy" alt="Bande-annonce montée et sonorisée sur Reaper" />
                         </div>
                         <div class="carte-projet_corps">
                             <p class="carte-projet_etiquette">Montage sonore sur Reaper</p>
@@ -137,7 +137,7 @@
                 <div class="swiper-slide">
                     <article class="carte-projet">
                         <div class="carte-projet_media">
-                            <img src="assets/images/project-generique-bg.webp" alt="Générique d’ouverture de l’émission Virage Extrême" />
+                            <img src="assets/images/project-generique-bg.webp" loading="lazy" alt="Générique d’ouverture de l’émission Virage Extrême" />
                         </div>
                         <div class="carte-projet_corps">
                             <p class="carte-projet_etiquette">Générique d’émission</p>
@@ -153,7 +153,7 @@
                 <div class="swiper-slide">
                     <article class="carte-projet">
                         <div class="carte-projet_media">
-                            <img src="assets/images/project-3d-bg.webp" alt="Animation d’une scène 3D" />
+                            <img src="assets/images/project-3d-bg.webp" loading="lazy" alt="Animation d’une scène 3D" />
                         </div>
                         <div class="carte-projet_corps">
                             <p class="carte-projet_etiquette">Scène 3D animée</p>
@@ -169,7 +169,7 @@
                 <div class="swiper-slide">
                     <article class="carte-projet">
                         <div class="carte-projet_media">
-                            <img src="assets/images/project-video-musicale-bg.webp" alt="Animation 2D d’une vidéo musicale" />
+                            <img src="assets/images/project-video-musicale-bg.webp" loading="lazy" alt="Animation 2D d’une vidéo musicale" />
                         </div>
                         <div class="carte-projet_corps">
                             <p class="carte-projet_etiquette">Vidéo musicale animée</p>
@@ -205,27 +205,27 @@
 
             <div class="grille-outils">
                 <a href="https://www.figma.com/" class="carte-outil" target="_blank" rel="noopener">
-                    <img src="assets/icons/outils/carte/figma.webp" alt="" class="carte-outil_icone" />
+                    <img src="assets/icons/outils/carte/figma.webp" alt="" loading="lazy" class="carte-outil_icone" />
                     <p class="carte-outil_nom">Figma</p>
                 </a>
 
                 <a href="https://www.blackmagicdesign.com/products/davinciresolve" class="carte-outil" target="_blank" rel="noopener">
-                    <img src="assets/icons/outils/carte/davinci-resolve.webp" alt="" class="carte-outil_icone" />
+                    <img src="assets/icons/outils/carte/davinci-resolve.webp" alt="" loading="lazy" class="carte-outil_icone" />
                     <p class="carte-outil_nom">Resolve</p>
                 </a>
 
                 <a href="https://www.reaper.fm/" class="carte-outil" target="_blank" rel="noopener">
-                    <img src="assets/icons/outils/carte/reaper.webp" alt="" class="carte-outil_icone" />
+                    <img src="assets/icons/outils/carte/reaper.webp" alt="" loading="lazy" class="carte-outil_icone" />
                     <p class="carte-outil_nom">Reaper</p>
                 </a>
 
                 <a href="https://www.adobe.com/products/photoshop.html" class="carte-outil" target="_blank" rel="noopener">
-                    <img src="assets/icons/outils/carte/photoshop.webp" alt="" class="carte-outil_icone" />
+                    <img src="assets/icons/outils/carte/photoshop.webp" alt="" loading="lazy" class="carte-outil_icone" />
                     <p class="carte-outil_nom">Photoshop</p>
                 </a>
 
                 <a href="https://www.adobe.com/products/aftereffects.html" class="carte-outil" target="_blank" rel="noopener">
-                    <img src="assets/icons/outils/carte/after-effects.webp" alt="" class="carte-outil_icone" />
+                    <img src="assets/icons/outils/carte/after-effects.webp" alt="" loading="lazy" class="carte-outil_icone" />
                     <p class="carte-outil_nom">After Effects</p>
                 </a>
             </div>

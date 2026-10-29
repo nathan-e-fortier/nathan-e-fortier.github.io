@@ -205,6 +205,7 @@ export default class AnimationsScroll {
     // https://gsap.com/docs/v3/Plugins/SplitText/
     SplitText.create(texte, {
       type: 'words',
+      aria: 'none',
       autoSplit: true,
       onSplit: (split) =>
         // https://gsap.com/docs/v3/Plugins/ScrollTrigger/ (scrub)

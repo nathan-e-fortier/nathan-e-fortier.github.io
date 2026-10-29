@@ -47,6 +47,7 @@ export default class YouTube {
     }
 
     this.player = new YT.Player(this.videoContainer, {
+      host: 'https://www.youtube-nocookie.com',
       height: '100%',
       width: '100%',
       videoId: this.videoId,
