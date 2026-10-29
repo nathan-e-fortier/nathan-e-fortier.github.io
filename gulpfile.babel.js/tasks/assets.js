@@ -19,3 +19,9 @@ export function assets() {
     .pipe(changed(paths.assets.dest))
     .pipe(dest(paths.assets.dest));
 }
+
+export function sitemap() {
+  return src('src/sitemap.xml')
+    .pipe(plumber({ errorHandler }))
+    .pipe(dest(paths.dest));
+}
