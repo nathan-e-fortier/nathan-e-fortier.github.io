@@ -298,7 +298,7 @@ export default class GravityInterests {
       console.error('GravityInterests: erreur dans la boucle d’animation', err);
     }
 
-    requestAnimationFrame(this.tick);
+    if (this.actif) requestAnimationFrame(this.tick);
   }
 
   init() {
@@ -365,6 +365,11 @@ export default class GravityInterests {
       this.buildPills();
     });
 
-    this.tick();
+    this.actif = false;
+    new IntersectionObserver(([entree]) => {
+      const etaitActif = this.actif;
+      this.actif = entree.isIntersecting;
+      if (this.actif && !etaitActif) requestAnimationFrame(this.tick);
+    }).observe(this.card);
   }
 }
